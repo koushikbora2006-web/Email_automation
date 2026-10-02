@@ -1,0 +1,15 @@
+{
+  "name": "email-automation",
+  "version": "1.0.0",
+  "description": "Full-stack Email Automation platform with dual-sender support and responsive HTML templates",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"cyan.bold,magenta.bold\" --kill-others \"python backend/app.py\" \"npm --prefix frontend run dev\"",
+    "dev:backend": "python backend/app.py",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "install:all": "npm install && npm --prefix frontend install && pip install -r backend/requirements.txt"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
